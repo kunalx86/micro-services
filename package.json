@@ -1,0 +1,27 @@
+{
+  "name": "micro-services",
+  "version": "1.0.0",
+  "description": "Microservices application for basic user information",
+  "scripts": {
+    "dev": "concurrently \"cd auth && yarn dev\" \"cd user-info && yarn dev\""
+  },
+  "workspaces": [
+    "auth",
+    "user-info"
+  ],
+  "author": "Kunal Joshi",
+  "license": "MIT",
+  "dependencies": {
+    "amqplib": "^0.10.0",
+    "argon2": "^0.28.7",
+    "dotenv": "^16.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.4",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "concurrently": "^7.2.2",
+    "nodemon": "^2.0.19"
+  },
+  "private": true
+}
